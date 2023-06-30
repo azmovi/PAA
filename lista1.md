@@ -72,4 +72,9 @@ $$ T(n) = n + n^2 $$
 - Concluimos que a complexidade desse algoritmo está na ordem de $O(n^2)$
 
 ### 4 - Questão 
+- Escrever um algoritmo para determinar se existe uma letras duplicadas.
+E determinar sua complexidade.
 
+```py
+
+```
