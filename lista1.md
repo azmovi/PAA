@@ -1,10 +1,11 @@
 # Lista 1 - Alan Demétrius 
     Nome: Antônio Cícero Amorim de Azevedo
     Ra: 811455 
-
+> Recursão e Análise assintótica 
 ### 1 - Questão 
 - Algoritmo recursivo para buscar um elemento v em um vetor A, caso exista retornar o índice
 se não retornar _NULL_.
+
 ```py
 def busca_sequencial_recursiva(A: List[int], v: int, indice: int = 0) -> int:
     if len(A) == 0:
@@ -69,12 +70,23 @@ $$ T(n) = 3n + \frac{(n + 1)n}{2}$$
 - Simplificando nossa expressão e abstraindo as constantes
 $$ T(n) = n + n^2 $$
 
-- Concluimos que a complexidade desse algoritmo está na ordem de $O(n^2)$
+- Concluímos que a complexidade desse algoritmo está na ordem de $O(n^2)$
 
 ### 4 - Questão 
 - Escrever um algoritmo para determinar se existe uma letras duplicadas.
 E determinar sua complexidade.
 
 ```py
+def duplicada(string:str):
+    letras = set()
+    for letra in string:
+        if letra in letras:
+            return True
+        letras.add(letra)
+    return False
 
 ```
+- Para analisarmos complexidade precisamos previamente saber como funciona o if
+presente no código, ele vai executar em tempo constante logo $O(1)$, dessa forma
+conseguimos perceber que o responsável pela complexidade é unicamente o tamanho da
+string que for passada para função, já que o restante trabalha em tempo constante.
