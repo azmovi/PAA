@@ -92,4 +92,33 @@ $$ \log_{2}n = \log_{2}2^k $$
 $$ \log_{2}n = k * \log_{2}2 $$
 $$ \log_{2}n = k $$
 
+### 8 - Questão:
+- Encontrar o Big-O do _merg sort_ pelo método da recorrência.
+
+$$ T(n) = 2T(\frac{n}{2}) + n $$
+$$ T(n) = 2(2T(\frac{n}{4}) + \frac{n}{2}) + n $$
+$$ T(n) = 4T(\frac{n}{4}) + n + n $$
+$$ T(n) = 4(2T(\frac{n}{8}) + \frac{n}{4}) + n + n $$
+$$ T(n) = 8T(\frac{n}{8}) n + n + n $$
+$$ T(n) = 2^3T(\frac{n}{2^3}) + 3n $$
+
+- Dessa forma conseguimos generalizar para:
+$$ T(n) =  2^h + h*n$$
+
+- Sendo $h$ a altura da árvore temos:
+$$\frac{n}{2^h} = 1 $$
+$$n = 2^h $$
+$$ \log_{2}{n} = h * \log_{2} 2$$
+$$ \log_{2}{n} = h $$
+
+- Substituindo na equação principal:
+$$ T(n) =  2^{\log_{2}n} + \log_{2}{n}*n$$
+
+- Simplificando e removendo constantes
+$$ T(n) = n + \log_{2}{n}*n$$
+
+- Com isso percebemos que a complexidade do _merge sort_ é:
+
+$$ O(n*\log_{2}n)$$
+
 
