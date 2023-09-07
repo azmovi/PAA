@@ -4,7 +4,7 @@
 
 > Algoritmos Gulosos e Programação Dinâmica
 
-### 2 - Questão
+### 2° - Questão
 Um teste de mesa para o problema do troco com moedas de {1,5,7} centavos para 
 um troco de 10 utilizando algoritmos gulosos e programação dinâmica
 
@@ -62,9 +62,10 @@ em diante usa-se a moeda de um. Na etapa final usa-se duas moedas de 5
 - Ocorre uma diminuição da quantidade de moedas para o troco de 7 para cima, com
 exceção do troco para 10, que a forma mais otimizada sao apenas duas moedas de 5.
 
-5. Dado um conjunto de atividades, juntamente com o tempo de início e término de 
+### 5° Questão
+Dado um conjunto de atividades, juntamente com o tempo de início e término de 
 cada atividade, encontre o número máximo de atividades realizadas por uma única 
-pessoa, assumindo que uma pessoa pode trabalhar apenas em uma atividade por vez.
+pessoa, assumindo que uma pessoa pode trabalhar apenas em uma atividade por vez.**
 
 - input: número de atividades, atividade, periodo dessa atividade:
 - output: O numero inteiro de esportes que ele é capaz de fazer
@@ -97,4 +98,33 @@ def main():
 
     return atv_max(atv)
 ```
+### 7° Questão 
+Construir uma função recursiva com programação dinâmica para resolver a sequência 
+de fibonacci de um termo i, e fazer o teste de mesa dessa função para o valor i = 5.
+```py
+def fib(n):
+    if n == 0 or n == 1:
+        return 1
+    return fib(n-1) + fib(n-2)
+```
+
+- teste de mesa para n igual a 5
+
+- O codigo chamara recursivamente a funçao para n = 4 e n = 3, que por sua vez
+n = 2 e n = 1
+- fib(2) = fib(1) + fib(0)
+- fib(2) = 1 + 1
+- fib(2) = 2
+- Agora somos capazes de calcular o fib(3)
+- fib(3) = fib(2) + fib(1)
+- fib(3) = 2 + 1
+- fib(3) = 3
+- Por sua vez o fib(4)
+- fib(4) = fib(3) + fib(2)
+- fib(4) = 3 + 2
+- fib(4) = 5
+- E por ultimo o valor de fib(5)
+- fib(5) = fib(4) + fib(3)
+- fib(5) = 5 + 3
+- fib(5) = 8
 
